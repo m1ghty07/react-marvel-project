@@ -23,13 +23,13 @@ class App extends Component {
       <div className="app">
         <AppHeader />
         <main>
-          <errorBoundary>
+          <ErrorBoundary>
             <RandomChar />
-          </errorBoundary>
+          </ErrorBoundary>
           <div className="char__content">
-            <errorBoundary>
+            <ErrorBoundary>
               <CharList onCharSelected={this.onCharSelected} />
-            </errorBoundary>
+            </ErrorBoundary>
             <ErrorBoundary>
               <CharInfo charId={this.state.selectedChar} />
             </ErrorBoundary>
