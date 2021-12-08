@@ -1,4 +1,5 @@
 import { Component } from "react";
+import PropTypes from "prop-types"; //
 import "./charInfo.scss";
 import MarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
@@ -104,6 +105,7 @@ const View = ({ char }) => {
           ? null
           : "There is no comics for this characteroundary"}
         {comics.map((item, i) => {
+          // eslint-disable-next-line
           if (i > 9) return;
           return (
             <li className="char__comics-item" key={i}>
@@ -114,6 +116,10 @@ const View = ({ char }) => {
       </ul>
     </>
   );
+};
+
+CharInfo.propTypes = {
+  charId: PropTypes.number,
 };
 
 export default CharInfo;
