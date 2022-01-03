@@ -8,7 +8,9 @@ import SinglePage from "../pages/SinglePage";
 
 const Page404 = lazy(() => import("../pages/404"));
 const MainPage = lazy(() => import("../pages/MainPage"));
-const SingleComicPage = lazy(() => import("../pages/SingleComicPage"));
+const SingleComicPage = lazy(() =>
+  import("../pages/SingleComicPage/SingleComicPage")
+);
 const SingleCharacterPage = lazy(() =>
   import("../pages/SingleCharacterPage/SingleCharacterPage")
 );
